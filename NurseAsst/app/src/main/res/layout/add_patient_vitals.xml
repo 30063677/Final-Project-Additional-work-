@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway_regular"
+            android:text="ADD VITALS"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <ImageView
+            android:id="@+id/close_vitals_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/ic_cancel_24dp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1.5px"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"></View>
+
+        <LinearLayout
+            android:id="@+id/level_of_conciousness"
+            style="@style/layoutMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <RadioGroup
+
+                android:id="@+id/id_radio_level_of_conciousness"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:orientation="horizontal">-->
+
+
+                <RadioButton
+                    android:id="@+id/id_alert"
+                    style="@style/TextView"
+                    android:textSize="12dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Alert" />
+
+                <RadioButton
+                    android:textSize="12dp"
+                    android:id="@+id/id_verbal"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Verbal" />
+                <!--            </LinearLayout>-->
+
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="4dp">-->
+
+                <RadioButton
+                    android:textSize="12dp"
+                    android:id="@+id/id_pain"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Pain" />
+
+                <RadioButton
+                    android:textSize="12dp"
+                    android:id="@+id/id_unconciousness"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="unconscious" />
+                <!--            </LinearLayout>-->
+            </RadioGroup>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/level_of_conciousness">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:id="@+id/vitals_icon"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_pulserate">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="14dp"
+                android:layout_centerVertical="true"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEART RATE"
+                android:textColor="@color/lightGrey"
+                android:layout_toRightOf="@id/vitals_icon" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_pulse_rate"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                style="@style/editText"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/per_min"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="14dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="16dp"
+                android:text="PER MIN"
+                android:textColor="@color/lightGrey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <ImageView
+                android:id="@+id/bp_icon"
+                android:layout_centerVertical="true"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_bloodpressure">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_toEndOf="@+id/bp_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BP"
+                android:textColor="@color/lightGrey"
+                android:layout_toRightOf="@+id/bp_icon" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_blood_pressure"
+                android:layout_toStartOf="@+id/add_blood_pressure1"
+                style="@style/editText"
+                android:hint="SBP"
+                android:layout_width="100dp"
+                android:layout_marginLeft="14dp"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_toLeftOf="@+id/add_blood_pressure1">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/add_blood_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="/"
+                android:layout_toRightOf="@+id/add_blood_pressure">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_blood_pressure1"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="100dp"
+                style="@style/editText"
+                android:hint="DBP"
+                android:layout_width="100dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginRight="100dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                style="@style/Subtitle"
+                android:id="@+id/mmgh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="28dp"
+                android:text="mmHG"
+                android:textColor="@color/lightGrey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+
+            <ImageView
+                android:id="@+id/resp_rate"
+                android:layout_centerVertical="true"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_resprate">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Subtitle"
+                android:layout_toRightOf="@+id/resp_rate"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="RESPIRATORY RATE"
+                android:textColor="@color/lightGrey" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_alignParentRight="true"
+                android:id="@+id/add_resp_rate"
+                style="@style/editText"
+                android:layout_width="100dp"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginRight="100dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/per_min1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="16dp"
+                android:text="PER MIN"
+                android:textColor="@color/lightGrey" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+            <ImageView
+                android:id="@+id/temp_icon"
+                android:layout_centerVertical="true"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_temperature">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Subtitle"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/temp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="TEMPERATURE"
+                android:textColor="@color/lightGrey" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_temperature"
+                style="@style/editText"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginRight="100dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/f"
+                style="@style/Subtitle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginRight="66dp"
+                android:text="\u2109"
+                android:textColor="@color/lightGrey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+            <ImageView
+                android:id="@+id/weight_icon"
+                android:layout_centerVertical="true"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_oxygen_mask">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/weight_icon"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="O2 (Saturation)"
+                android:textColor="@color/lightGrey" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_weight"
+                style="@style/editText"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginRight="100dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Subtitle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="49dp"
+                android:layout_marginRight="56dp"
+                android:text="%"
+                android:textColor="@color/lightGrey" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/linearLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/height_icon"
+                style="@style/vitalsIcons"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_height">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/height_icon"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="height"
+                android:textColor="@color/lightGrey" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="100dp"
+                android:id="@+id/add_height"
+                style="@style/editText"
+                android:layout_width="100dp"
+                android:layout_marginLeft="14dp"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_marginRight="100dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:text="FEET"
+                android:textColor="@color/lightGrey" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/o2_requirement"
+            style="@style/layoutMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Patient require  O2 Supplementation"
+                android:textColor="@color/colorPrimary">
+
+            </TextView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_oxygen">
+
+                </ImageView>
+
+                <RadioButton
+                    android:id="@+id/radia_id1"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radia_id2"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/copd"
+            style="@style/layoutMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o2_requirement">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium"
+                android:text="COPD"
+                android:textColor="@color/colorPrimary">
+
+            </TextView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lung">
+
+                </ImageView>
+
+                <RadioButton
+                    android:id="@+id/o2_status_yes"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/o2_status_no"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_note"
+            style="@style/editText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:hint="Note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/copd">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_note">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_vitalss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="SUBMIT"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

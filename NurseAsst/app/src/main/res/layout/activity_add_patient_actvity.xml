@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.AddPatientActvity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"></include>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_patient_validation_status"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/include"
+        android:elevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Lightred"
+            android:gravity="center">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/add_patient_validation_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="staus"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/add_patient_image"
+                style="@style/CicularImageView"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_patient_name"
+                style="@style/editText"
+                android:layout_marginTop="32dp"
+                android:drawableLeft="@drawable/ic_person_24dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_patient_image" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_patient_name">
+
+
+                <LinearLayout
+                    style="@style/editText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittextfields_backround">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_genders"></ImageView>
+
+
+                    <Spinner
+                        android:id="@+id/add_patient_gender"
+                        style="@style/editText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"></Spinner>
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/add_patient_age"
+                    style="@style/editText"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittextfields_backround"
+                    android:drawableLeft="@drawable/ic_age"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="3">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_patient_number"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_phonek"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:maxLength="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_patient_id"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_fingerprint"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Id Number"
+                android:inputType="number"
+                android:maxLength="12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_patient_number">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_patient_location"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_location"
+                android:hint="Location"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_patient_id">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_money"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_money"
+                android:hint="Amount"
+                android:textStyle="normal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_patient_location">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/id_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="165dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="165dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="submit"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_money" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

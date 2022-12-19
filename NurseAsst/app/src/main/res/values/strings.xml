@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Nurse Asst</string>
+    <string name="hear"> error heart rate</string>
+    <string-array name="Genders">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+
+
+
+</resources>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/registration_rool_layout"
+    android:background="@color/white"
+    tools:context=".Activities.RegistrationActivity">
+
+
+    <include
+        android:id="@+id/include_registration_toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registration_validation_status"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/include_registration_toolbar"
+        android:elevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Lightred"
+            android:gravity="center">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registration_validation_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="staus"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:layout_below="@id/include_registration_toolbar"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_registration_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/add_profile_image"
+                style="@style/CicularImageView"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_launcher_background"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_name"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_person_24dp"
+                android:hint="Name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_profile_image" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_name">
+
+
+                <LinearLayout
+                    android:id="@+id/add_nurse_gender"
+                    style="@style/editText"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_genders"
+                    android:hint="Gender"
+                    android:inputType="text">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_genders"></ImageView>
+
+
+                    <Spinner
+                        android:id="@+id/add_nurse_genders"
+                        style="@style/editText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"></Spinner>
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/add_nurse_age"
+                    style="@style/editText"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:maxLength="3"
+                    android:drawableLeft="@drawable/ic_age"
+                    android:hint="Age"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_email"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_mail_black_24dp"
+                android:hint="E-mail"
+                android:inputType="textWebEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout12" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_number"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_phonek"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_email" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_password"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_passwordicon"
+                android:drawableRight="@drawable/ic_passwordvisible"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:paddingRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_number" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_confirm_password"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_passwordicon"
+                android:drawableRight="@drawable/ic_passwordvisible"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_password" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_clinic"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_clinic"
+                android:hint="Clinic Name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_confirm_password" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_nurse_location"
+                style="@style/editText"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_location"
+                android:hint="Location"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_clinic" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_registeration_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="SUBMIT"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_nurse_location">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

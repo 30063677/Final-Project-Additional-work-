@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vitals_container"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/priroityLayout"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/priroity"
+                style="@style/Title"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PRIORITY"
+                android:textColor="@color/textColor">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priroityLayout">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5px"
+                android:layout_weight="1"
+                android:background="@color/divider">
+
+            </View>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/id_time_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="RECENTING READING"
+                android:textColor="@color/textColor">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5px"
+                android:layout_weight="1"
+                android:background="@color/divider">
+
+            </View>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/note"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+            style="@style/vitalsMargins"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/lightGrey"
+                android:layout_marginTop="4dp"
+
+                style="@style/SubtitleSemiBold"
+                android:text="NOTE : "
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginBottom="4dp"
+                android:id="@+id/tx_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oxygenAndCopd"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="8dp"
+            style="@style/vitalsMargins"
+            android:background="@color/divider"
+            android:id="@+id/div"
+            app:layout_constraintTop_toBottomOf="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="1.5px">
+
+        </View>
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/concious_layout"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/div">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/lightGrey"
+                style="@style/SubtitleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="LEVEL OF CONSCIOUsNESS    -   ">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/id_level_of_consciousness"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/concious_layout">
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/pulsrateColorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="HEART RATE"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/NormalTextMedium"
+                            android:textColor="@color/tinyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beats/Min"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/pulse_rate"
+                            style="@style/vitalsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_heart">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/bpColorStatsu"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="BP"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/NormalTextMedium"
+                            android:textColor="@color/tinyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mmHG"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bp"
+                            style="@style/vitalsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_bloodpressure">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/resprateColorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="RESP RATE"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/NormalTextMedium"
+                            android:textColor="@color/tinyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PER/MIN"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/resp_rate"
+                            style="@style/vitalsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_resprate">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/temperatureColorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="TEMPERATURE"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/NormalTextMedium"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/tinyText"
+                            android:layout_height="wrap_content"
+                            android:text="\u2109"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/temperature"
+                            style="@style/vitalsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_temperature">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saturation_layout"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/saturationcolorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="SATURATION"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/NormalTextMedium"
+                            android:textColor="@color/tinyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KG"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/saturation"
+                            style="@style/vitalsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_pulse_oximeter">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/heightColorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/vitals_color_status_shape"
+                        android:backgroundTint="@color/white" />
+
+
+                    <LinearLayout
+                        android:id="@+id/delete_patient"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_height">
+
+                </ImageView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oxygenAndCopd"
+            style="@style/vitalsMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saturation_layout">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/oxygencolorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/vitals_color_status_shape"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="OXYGEN - "
+                            android:textColor="@color/tinyText"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                        <!--                        style="@style/SmallText"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="KG"></androidx.appcompat.widget.AppCompatTextView>-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/id_oxygen"
+                            style="@style/Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text=""></androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_oxygen_mask">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <LinearLayout
+                        android:id="@+id/copdColorStatus"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/vitals_color_status_shape"
+                        android:backgroundTint="@color/green"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatCheckedTextView
+                            style="@style/SubtitleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="COPD - "
+                            android:textColor="@color/tinyText"
+                            android:textStyle="bold"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+                        <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                        <!--                        style="@style/SmallText"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="FEET"></androidx.appcompat.widget.AppCompatTextView>-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/copd"
+                            style="@style/Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="">
+
+                        </androidx.appcompat.widget.AppCompatTextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_lung">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    </example.chenj.com.apptest.ShadowContainer>-->
+
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<resources>
+
+
+    <bool name="isTablet">true</bool>
+
+    <style name="AppMaterialTheme" parent="SuperMaterialTheme">
+
+    </style>
+
+    <style name="SuperMaterialTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="vitalsIcons">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+
+
+    <style name="editText">
+        <item name="android:background">@drawable/edittextfields_backround</item>
+        <item name="android:textColor">@color/lightGrey</item>
+        <item name="android:textColorHint">@color/lightGrey</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">14dp</item>
+    </style>
+
+
+    <style name="layoutMargins">
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+    </style>
+
+    <style name="vitalsMargins">
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
+    </style>
+
+
+
+    <style name="cardView">
+
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">14dp</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+
+    <style name="button">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+    </style>
+
+
+    <style name="vitalsValue" parent="TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="UmdaaTitle" parent="TextView">
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Title" parent="TextView">
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Subtitle" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+
+    </style>
+
+    <style name="SubtitleSemiBold" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+
+    </style>
+
+    <style name="SubtitleMedium" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/raleway_medium</item>
+
+    </style>
+
+    <style name="NormalText" parent="TextView">
+
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/ralway_font</item>
+
+    </style>
+
+    <style name="NormalTextSemiBold" parent="TextView">
+
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+
+    </style>
+
+    <style name="NormalTextMedium" parent="TextView">
+
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/raleway_medium</item>
+
+    </style>
+
+    <style name="SmallText" parent="TextView">
+
+        <item name="android:textColor">@color/tinyText</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+
+    </style>
+
+
+    <style name="tabTitle" parent="TextView">
+
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+
+    </style>
+
+    <style name="CicularImageView">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="buttonView">
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+</resources>
